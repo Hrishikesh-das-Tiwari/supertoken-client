@@ -34,7 +34,9 @@ function ProtectedPage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const res = await axios.get("http://localhost:3001/workspace");
+        const res = await axios.get(
+          "https://supertoken-backend-production-a15a.up.railway.app/workspace"
+        );
         const { myWorkspace } = await res.data;
         setWorkspace(myWorkspace);
       } catch (error) {
@@ -50,7 +52,8 @@ function ProtectedPage() {
 
     try {
       const res = await axios.delete(
-        "http://localhost:3001/workspace/" + workspaceId
+        "https://supertoken-backend-production-a15a.up.railway.app/workspace/" +
+          workspaceId
       );
       const { myWorkspace } = await res.data;
       setWorkspace(myWorkspace);
@@ -62,7 +65,9 @@ function ProtectedPage() {
 
   async function handleGetWorkspace() {
     try {
-      const res = await axios.get("http://localhost:3001/workspace");
+      const res = await axios.get(
+        "https://supertoken-backend-production-a15a.up.railway.app/workspace"
+      );
       const json = await res.data;
       alert(JSON.stringify(json));
     } catch (error) {
@@ -73,7 +78,9 @@ function ProtectedPage() {
 
   async function handleCreateNewWorkspace() {
     try {
-      const res = await axios.post("http://localhost:3001/workspace");
+      const res = await axios.post(
+        "https://supertoken-backend-production-a15a.up.railway.app/workspace"
+      );
       const { myWorkspace } = res.data;
       setWorkspace(myWorkspace);
     } catch (error) {
