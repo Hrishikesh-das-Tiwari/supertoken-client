@@ -9,16 +9,16 @@ export function getApiDomain() {
 }
 
 export function getWebsiteDomain() {
-  let host = window.location.hostname;
-  if (host === "localhost") {
-    return "http://localhost:8888";
-  }
+  // let host = window.location.hostname;
+  // if (host === "localhost") {
+  //   return "http://localhost:8888";
+  // }
 
-  let port = window.location.port;
-  if (port !== "0" && port !== "80" && port !== "443" && port !== "") {
-    return "https://" + host + ":" + port;
-  }
-  return "https://" + host;
+  // let port = window.location.port;
+  // if (port !== "0" && port !== "80" && port !== "443" && port !== "") {
+  //   return "https://" + host + ":" + port;
+  // }
+  return "http://localhost:3000";
 }
 
 export const websiteDomain =
