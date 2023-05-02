@@ -18,7 +18,7 @@ export function getWebsiteDomain() {
   // if (port !== "0" && port !== "80" && port !== "443" && port !== "") {
   //   return "https://" + host + ":" + port;
   // }
-  return "http://localhost:3000";
+  return "https://supertoken-auth-frt2.vercel.app/";
 }
 
 export const websiteDomain =
